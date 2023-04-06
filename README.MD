@@ -1,1 +1,0 @@
-programmers school => 코딩테스트 연습에서 파이썬 기준 코테 연습문제 풀기
