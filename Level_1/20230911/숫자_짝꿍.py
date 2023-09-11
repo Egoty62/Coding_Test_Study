@@ -7,3 +7,4 @@ def solution(X, Y):
     return '0' if answer[0] == '0' else answer
 
 # functools 에서 Counter를 가져와서 해결할 수도 있음
+    # functools가 아님 collection임
