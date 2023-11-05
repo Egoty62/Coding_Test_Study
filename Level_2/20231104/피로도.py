@@ -22,7 +22,6 @@ def solution(k, dungeons):
                 if n >= 0 and bull == True :
                     if answer < i :
                         answer = i
-            print(j, bull)
 
     return answer
 
