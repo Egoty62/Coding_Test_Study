@@ -7,15 +7,14 @@ def solution(begin, target, words):
         visited = {i : [] for i in words}
         visited[begin] = []
         stack.append(begin)
-        while len(stack) :
+        while stack :
             last = stack[-1]
             if last == target :
                 answer.append(len(stack) - 1)
             else :
                 for k in [i for i in words if i not in stack] :
-                    print(k, stack)
-                    if k in visited[stack[-1]] :
-                        stack.pop()
+                    if k in visited[last] :
+                        continue
                     else :
                         diff = 0
                         for j in range(n) :
@@ -26,8 +25,7 @@ def solution(begin, target, words):
                             stack.append(k)
             if last == stack[-1] :
                 stack.pop()
-
-            #print(stack)
+            
     return min(answer) if answer else 0
 
-print(solution("hit", "cog", ["hot", "dot", "dog", "lot", "log", "cog"]))
+# https://school.programmers.co.kr/learn/courses/30/lessons/43163
